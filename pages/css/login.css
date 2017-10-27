@@ -1,15 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
 body {
 	background-color: #2E4756;
 }
 
+h3 {
+    font-family: sans-serif;
+    font-size: 600%;
+    text-align: center;
+}
+
 .frame {
-	position: absolute;
+	position: relative;
 	top: 50%;
 	left: 45%;
 	right: 45%;
 	width: 30%;
 	height: 500px;
-	margin-top: -200px;
+    margin-top: -200px;
 	margin-left: -200px;
 	border-radius: 2px;
 	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
@@ -21,97 +29,92 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.frame:hover {
-	position: absolute;
-	top: 49.8%;
-	left: 45%;
-	width: 30%;
-	height: 505px;
-	margin-top: -200px;
-	margin-left: -200px;
-	border-radius: 2px;
-	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
-	overflow: hidden;
-	background: #16262E;
-	color: #fff;
-	font-family: 'Open Sans', Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.title {
+    display:  flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    top: 20%;
+    src: url(http://fonts.googleapis.com/css?family=Tangerine);
+    font-family: sans-serif;
+    font-size: 80%;
+    position: relative;
+    text-align: center;
 }
 
-.left {
-	position: absolute;
-	top: 80%;
-	left: 40%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+.loginbar {
+    background-image: url('http://cresttechnosoft.com/wp-content/uploads/2016/07/no-photo-profile.png');
+    background-size: 10%;
+    background-position: 95%;
+    background-repeat: no-repeat;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    height: 10%;
+    font-size: 1vw;
+    width: 60%;
 }
 
-.loginfont {
-	position: absolute;
-	top: 40%;
-	left: 15%;
+.passwordbar {
+    background-image: url('http://www.iconsdb.com/icons/preview/gray/lock-xxl.png');
+    background-size: 10%;
+    background-position: 95%;
+    background-repeat: no-repeat;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    height: 10%;
+    font-size: 1vw;
+    width: 60%;
 }
 
-.signupfont {
-	position: absolute;
-	top: 45%;
-	left: 5%;
-	width: 100%;
+button {
+    background-image: url('http://www.iconsdb.com/icons/preview/dim-gray/key-xxl.png');
+    background-size: 15%;
+    background-position: 26%;
+    background-repeat: no-repeat;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    color: white;
+    font-size: 180%;
+    text-align: center;
+    background-color: #3C7A89;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    height: 10%;
+    width: 60%;
+    font-family: sans-serif;
 }
 
-.right {
-	position: absolute;
-	top: 80%;
-	left: 70%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+button:hover {
+    opacity: 0.8;
 }
 
-.button {
-	position: relative;
-	cursor: pointer;
+#forgot {
+    text-decoration: none;
+    color: #a93535;
+    position: relative;
+    font-size: 0.8vw;
+    margin-left: 20%;
 }
 
-.button span {
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	right: 0%;
-	text-align: center;
-	line-height: 58px;
-	text-transform: uppercase;
-	font-size: 150%;
-	letter-spacing: 1px;
-	font-weight: 300;
+#forgot:hover {
+    opacity: 0.8;
 }
 
-.button .border {
-	fill: #3C7A89;
-	stroke-width: 1;
+#new {
+    font-family: sans-serif;
+    text-decoration: none;
+    position: relative;
+    color: #a93535;
+    font-size: 0.8vw;
+    margin-top: 2%;
 }
 
-.button .bg-line {
-	fill: #5CA4EA;
-	stroke: #91C9FF;
-	-webkit-transition: all .8s ease-in-out;
-	transition: all .8s ease-in-out;
+#new:hover {
+    opacity: 0.8;
 }
-
-.button .hl-line {
-	stroke: #fff;
-	stroke-dasharray: 40 480;
-	stroke-dashoffset: 40;
-	-webkit-transition: all .8s ease-in-out;
-	transition: all .8s ease-in-out;
-}
-
-.button:hover .bg-line {
-	fill: #4F95DA;
-}
-
-.button:hover .hl-line {
-	stroke-dashoffset: -480;    
-}
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);

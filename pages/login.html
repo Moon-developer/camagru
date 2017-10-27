@@ -3,28 +3,22 @@
 	<HEAD>
 		<TITLE>Login page</TITLE>
 		<LINK rel="stylesheet prefetch" type="text/css" href="css/login.css">
+        <LINK rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 	</HEAD>
 
 	<BODY>
-		<DIV class="frame">
-			<DIV class="left">
-				<DIV class="button">
-					<div class="loginfont"><span>LOGIN</span></div>
-					<svg width="60%" height="60%" viewBox="0 0 180 60" class="border">
-						<polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-						<polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-					</svg>
-				</DIV>
-			</DIV>
-			<DIV class="right">
-				<DIV class="button">
-					<div class="signupfont"><span>SIGN-UP</span></div>
-					<svg width="105%" height="105%" viewBox="0 0 180 60" class="border">
-						<polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-						<polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-					</svg>
-				</DIV>
-			</DIV>
+        <!-- This is the heading of the site -->
+        <!-- This bit is the box with all the login stuff -->
+		<DIV class="frame" >
+            <DIV class="title">
+                <form method="post">
+                    <h1>LOG IN <a id="forgot" href="#">forgot password?</a></h1>
+                <input size="60" type="text" placeholder="Log-in" class="loginbar" name="login"><br></br></br>
+        <input size="60" type="text" placeholder="Password" class="passwordbar" name="password"><br></br></br>
+        <button type="submit">Log in</button><br></br></br>
+                    <a id="new" href="#" >click here to create a new account</a>
+                </form>
+            </DIV>
 		</DIV>
 	</BODY>
 </HTML>
