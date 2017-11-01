@@ -7,22 +7,79 @@
         <LINK rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     </HEAD>
 
-	<BODY>
+	<BODY onload="init();">
         <!-- This is the heading of the site -->
         <img class="camagru" src="resources/title.png" name="camagru title">
         <!-- Camera -->
-        <div class="booth">
-            <video id="video" width="400" height="300"></video>
-        </div>
-        <script src="javascript/camera.js"></script>
-        <!-- Gallery -->
-        <canvas id="canvas">
-        </canvas>
-        <div class="output">
-            <img id="photo" alt="screen capture here.">
-        </div>
-        <!-- Filters -->
-        
+        <div>
+
+            <video class="camera" onclick="snapshot(this);" width=640 height=480 id="video" controls autoplay></video>
+            <canvas  id="myCanvas" width="640" height="480"></canvas>
+            <p class="flex">
+                <button class="b" onclick="startWebcam();">Start WebCam</button>
+                <button class="b" onclick="stopWebcam();">Stop WebCam</button>
+                <button class="b" onclick="snapshot();">Take Snapshot</button>
+            </p>
+            <script>
+                //--------------------
+                // GET USER MEDIA CODE
+                //--------------------  
+                navigator.getUserMedia = ( navigator.getUserMedia ||
+                navigator.webkitGetUserMedia ||
+                navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia);
+
+                var video;
+                var webcamStream;
+
+                function startWebcam() {
+                    if (navigator.getUserMedia) {
+                        navigator.getUserMedia (
+                        // constraints
+                        {
+                            video: true,
+                            audio: false
+                        },
+                        // successCallback
+                    function(localMediaStream) {
+                        video = document.querySelector('video');
+                        video.src = window.URL.createObjectURL(localMediaStream);
+                        webcamStream = localMediaStream;
+                    },
+                    // errorCallback
+                    function(err) {
+                        console.log("The following error occured: " + err);
+                    }
+                );
+                } else {
+                    console.log("getUserMedia not supported");
+                    }
+                }
+
+                function stopWebcam() {
+                    webcamStream.getTracks()[0].stop();
+                }
+                //---------------------
+                // TAKE A SNAPSHOT CODE
+                //---------------------
+                var canvas, ctx;
+
+                function init() {
+                    // Get the canvas and obtain a context for
+                    // drawing in it
+                    canvas = document.getElementById("myCanvas");
+                    ctx = canvas.getContext('2d');
+                }
+                function snapshot() {
+                    // Draws current image from the video element into the canvas
+                    ctx.drawImage(video, 0,0, canvas.width, canvas.height);
+                }
+            </script>
+            </div>
+            <!-- Gallery -->
+            <canvas id="canvas">
+            </canvas>
+            <!-- Filters -->
         </script>
 	</BODY>
 </HTML>
