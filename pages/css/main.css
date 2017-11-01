@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
+body {
+	background-color: #2E4756;
+    background: radial-gradient(circle, #2E4756, #2E4756, #21333e);
+}
+
+.camagru {
+    width: 60%;
+    display: block;
+    margin: 30 auto;
+    height: 12%;
+    width: 40%;
+}
+
+.booth {
+    width: 400px;
+    background-color: #ccc;
+    border: 10px solid #ddd;
+    margin: 0 autor;
+    
+}
